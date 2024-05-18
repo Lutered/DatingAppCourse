@@ -19,6 +19,8 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { jwtInterceptor } from './_interceptors/jwt.interceptor';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
+import { loadingInterceptor } from './_interceptors/loading.interceptor';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { jwtInterceptor } from './_interceptors/jwt.interceptor';
     TestErrorComponent,
     NotFoundComponent,
     ServerErrorComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { jwtInterceptor } from './_interceptors/jwt.interceptor';
   ],
   providers: [
     //{provide: HTTP_INTERCEPTORS, useFactory: errorInterceptor, multi: true}
-    provideHttpClient(withInterceptors([errorInterceptor, jwtInterceptor]))
+    provideHttpClient(withInterceptors([errorInterceptor, jwtInterceptor, loadingInterceptor]))
   ],
   bootstrap: [AppComponent]
 })
