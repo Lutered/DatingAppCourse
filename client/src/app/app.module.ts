@@ -24,6 +24,7 @@ import { loadingInterceptor } from './_interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DatePickerComponent } from './_forms/date-picker/date-picker.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { DatePickerComponent } from './_forms/date-picker/date-picker.component'
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    DateAgoPipe,
     SharedModule
   ],
   providers: [
