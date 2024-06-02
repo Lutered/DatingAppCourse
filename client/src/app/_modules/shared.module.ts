@@ -9,6 +9,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 import { PaginationModule } from 'ngx-bootstrap/pagination'
 import { ButtonsModule } from 'ngx-bootstrap/buttons'
 import { DateAgoPipe } from '../pipes/date-ago.pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [],
@@ -25,7 +26,8 @@ import { DateAgoPipe } from '../pipes/date-ago.pipe';
     //FileUploadModule,
     BsDatepickerModule.forRoot(),
     PaginationModule.forRoot(),
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
+    ModalModule.forRoot()
   ],
   exports:[
     BsDropdownModule,
@@ -35,7 +37,8 @@ import { DateAgoPipe } from '../pipes/date-ago.pipe';
    // FileUploadModule,
    BsDatepickerModule,
    PaginationModule,
-   ButtonsModule
+   ButtonsModule,
+   ModalModule
   ]
 })
 export class SharedModule { }
